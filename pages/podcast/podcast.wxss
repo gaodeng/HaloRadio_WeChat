@@ -1,0 +1,10 @@
+/* podcast.wxss */
+
+.feedItem {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.feedItem:nth-child(odd) {
+  background-color: #fafafa;
+}

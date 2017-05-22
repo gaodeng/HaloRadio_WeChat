@@ -1,0 +1,29 @@
+<!--player.wxml-->
+<view class="container" style="align-items:center;padding:20px 40px 40px 40px;">
+  <text style="margin:10px 20px;">{{author}}</text>
+  <image src="{{cover}}" mode="aspectFit" class="cover" />
+  <text style="margin:10px 20px;">{{title}}</text>
+  <view class="timeline" style="width:90%;">
+
+    <view class="seeker">
+
+      <view class="timePercent" style="width:{{100*currentPosition/duration}}%;"></view>
+      <view class="downloadPercent" style="width:{{downloadPercent/100}}%;"></view>
+      <view catchtouchstart="thumbTouchStart" catchtouchmove="thumbTouchMove" catchtouchend="thumbTouchEnd" catchtouchcancel="thumbTouchCancel" class="thumb" style="left:{{thumbLeft}}%"></view>
+    </view>
+
+  </view>
+  <view class="playCtrl">
+
+    <view class="playPause" bindtap="playPauseTapHandler" hover-class="playPauseHover">
+      <image src="{{playPauseImg}}" mode="aspectFit" />
+    </view>
+    <view class="timePane">
+      <text class="timeLabel">{{currentPositionLabel}}</text>/
+      <text class="timeLabel">{{durationLabel}}</text>
+    </view>
+  </view>
+
+
+
+</view>

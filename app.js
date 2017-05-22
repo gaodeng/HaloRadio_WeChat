@@ -5,6 +5,19 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+    var thisCtx=this;
+    wx.getSystemInfo({
+      success: function (res) {
+        console.log(res.model)
+        console.log(res.pixelRatio)
+        console.log(res.windowWidth)
+        console.log(res.windowHeight)
+        console.log(res.language)
+        console.log(res.version)
+        console.log(res.platform)
+        thisCtx.globalData.systemInfo=res;
+      }
+    })
   },
   getUserInfo:function(cb){
     var that = this
@@ -25,6 +38,7 @@ App({
     }
   },
   globalData:{
-    userInfo:null
+    userInfo:null,
+    currentTrack:{}
   }
 })

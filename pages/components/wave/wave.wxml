@@ -1,0 +1,9 @@
+<!--player.wxml-->
+<navigator url="../player/player" style="width:0px;height:0px">
+
+<view style="padding:30px;">
+  <view class="wave" hover-class="waveHover" bindtouchstart="waveTouchStart" catchtouchmove="waveTouchMove" bindtouchend="waveTouchEnd" bindtouchcancel="waveTouchCancel" style="left:{{wavePos[0]}}px;top:{{wavePos[1]}}px">
+  <image  mode="aspectFit" src="../../images/music_selected.png"></image>
+  </view>
+</view>
+</navigator>

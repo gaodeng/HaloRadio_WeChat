@@ -1,0 +1,7 @@
+<!--podcast.wxml-->
+<view class="container">
+ 
+<view class="feedItem" bindtap="bindItemTap"  wx:for="{{items}}" data-stream-url="{{item.enclosure}}" data-title="{{item.title}}" data-author="{{author}}" data-cover="{{cover}}" >
+  {{item.title}}
+</view>
+</view>

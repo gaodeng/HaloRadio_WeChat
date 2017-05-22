@@ -1,12 +1,35 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/profile/profile",
+    "pages/podcast/podcast",
+    "pages/player/player"
+    
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#f5f5f5",
+    "backgroundColor": "#f5f5f5",
+    "navigationBarTitleText": "HaloRadio",
+    "navigationBarTextStyle": "black"
+    
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#159570",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "发现",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_selected.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile_selected.png"
+      }
+    ]
   }
 }

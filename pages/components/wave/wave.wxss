@@ -1,0 +1,23 @@
+/* player.wxss */
+.wave{
+  background-color: rgba(185,244,188,1);
+  width:50px;
+  height:50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  box-shadow: 1px 1px 3px #159570;
+  position: fixed;
+  left: 10px;
+  top:10px;
+  transition: transform .3s;
+  z-index: 999;
+}
+.waveHover{
+  transform: scale(1.2,1.2);
+}
+.wave image{
+  width:24px;
+  height:24px;
+}

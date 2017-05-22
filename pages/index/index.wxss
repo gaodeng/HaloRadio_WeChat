@@ -1,21 +1,90 @@
 /**index.wxss**/
-.userinfo {
+@import "../components/wave/wave.wxss";
+.searchBox  {
+
+  align-self:stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding:10px 20px;
+  background-color: #ffffff;
+  border-radius:5px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.1);
+  font-size:14px;
+  margin:20px;
+
+
+}
+
+.searchBox image{
+  width:24px;
+  height:24px;
+}
+
+.searchBox input{
+  width:100%;
+  margin:0px 15px;
+  
+}
+.searchBox .placeHolder{
+  color:#bfbfbf;
+}
+.searchBox .cancel{
+  color:#159570;
+  white-space:nowrap;
+  transition: all .3s;
+  opacity: 0.5;
+  pointer-events: none;
+  margin-left:10px;
+}
+.searchBox .cancel.show{
+ opacity: 1;
+  pointer-events: auto;
+}
+
+.searchBox .clear{
+  transition: all .3s;
+  opacity: 0;
+  pointer-events: none;
+  
+}
+.searchBox .clear.show{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.podcastList {
+  height: 100%;
+  align-self:stretch;
   display: flex;
   flex-direction: column;
+  align-items:stretch;
+  justify-content: space-between;
+  
+  box-sizing: border-box;
+  margin-top: 20rpx;
+} 
+
+
+.podcast{
+  background-color: white;
+  
+  text-align: left;
+  display:flex;
+  flex-direction: row;
   align-items: center;
+  min-height:100px;
+  width:100%;
+  
+}
+.podcast image{
+  margin: 10px;
+  width: 50px; 
+  height: 50px; 
+  background-color: #eeeeee
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+.podcast:nth-child(odd){
+  
+  background-color: #f9f9f9;
 }
