@@ -2,8 +2,11 @@
 .cover{
   border-radius: 5px;
   margin:10px;
-  box-shadow: 1px 5px 33px rgba(0,0,0,.2);
+  transition: all .5s;
   
+}
+.coverShadow{
+  box-shadow: 1px 5px 33px rgba(0,0,0,.2);
 }
 .title{
   margin:20px;
@@ -45,7 +48,7 @@
 .seeker .timePercent{
   width:10px;
   height:100%;
-  background-color:#159570;
+  background-color:#8898AA;
   position:absolute;
   border-radius: 10px;
 }
@@ -91,6 +94,6 @@
   min-width: 50px;
   text-align: center;
   position:absolute;
-  top:1px;
-  right:1px;
+  top:5px;
+  right:5px;
 }

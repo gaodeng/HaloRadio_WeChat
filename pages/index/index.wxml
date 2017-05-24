@@ -2,9 +2,11 @@
 <view class="container">
 
   <view  bindtap="bindViewTap" class="searchBox" catchtap="catchSearchBoxTap">
-      <image src="../../images/search.png" mode="aspectFit" />
+      <icon type="search" size="18" style="margin-top:2px"/>
      <input value="{{searchInputValue}}" focus="{{searchInputFocus}}" bindfocus="bindSearchInputFocus" bindblur="bindSearchInputBlur" bindinput="bindSearchInput" placeholder="搜索" placeholder-class="placeHolder"  confirm-type="search" bindconfirm="startSearch"/>
-     <view catchtap="catchSearchInputClear" class="clear {{hideSearchClear?'':'show'}}"><icon type="clear" size="12"  /></view>
+     <view catchtap="catchSearchInputClear" class="clear {{hideSearchClear?'':'show'}}">
+     <icon type="clear" size="16"  style="margin-top:4px"/>
+     </view>
 
      <view class="cancel {{hideSearchCancel?'':'show'}}"    catchtap="catchHideKeybord"> 取消 </view>
   </view>

@@ -33,7 +33,7 @@
   color:#159570;
   white-space:nowrap;
   transition: all .3s;
-  opacity: 0.5;
+  opacity: 0;
   pointer-events: none;
   margin-left:10px;
 }

@@ -3,19 +3,21 @@ var playerStateUpdateId=0;
 var app=getApp();
 var lastTouchPos;
 var thumbTouchStart=false;
+let DEFAULT_COVER ='../../images/album.png';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    currentPosition:40,
-    duration:120,
-    downloadPercent:60,
+    currentPosition:0,
+    duration:0,
+    downloadPercent:0,
     status:2,
     title:'',
     playPauseImg: '../../images/music_selected.png',
-    cover:'../../images/album.png',
+    cover:DEFAULT_COVER,
+    DEFAULT_COVER,
     thumbLeft:0,
     author:''
   },

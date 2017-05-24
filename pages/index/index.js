@@ -72,8 +72,11 @@ Page({
     this.updateSearchInputClearState();
   },
   bindSearchInputBlur: function () {
+    
     this.setData({ hideSearchCancel: true })
-    this.updateSearchInputClearState();
+    this.setData({ hideSearchClear: true })
+    
+   
   },
   startSearch: function (e) {
     var value = e.detail.value
