@@ -41,7 +41,7 @@ Page({
     wx.setNavigationBarTitle({
       title: options.title
     })
-    wx.showNavigationBarLoading() 
+    //wx.showNavigationBarLoading() 
 
 
 

@@ -126,7 +126,7 @@ Page({
     queryRequest({});
     function queryRequest(data) {
       wx.request({
-        url: "https://www.moon.fm/api/oneradio/v3/hot",
+        url: "https://www.moon.fm/api/oneradio/v4/hot",
         data: data,
         header: {
           // "Content-Type":"application/json"

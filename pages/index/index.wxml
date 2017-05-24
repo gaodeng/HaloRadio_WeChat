@@ -2,7 +2,7 @@
 <view class="container">
 
   <view  bindtap="bindViewTap" class="searchBox" catchtap="catchSearchBoxTap">
-      <image src="../../images/search.png" mode="aspectFit"/>
+      <image src="../../images/search.png" mode="aspectFit" />
      <input value="{{searchInputValue}}" focus="{{searchInputFocus}}" bindfocus="bindSearchInputFocus" bindblur="bindSearchInputBlur" bindinput="bindSearchInput" placeholder="搜索" placeholder-class="placeHolder"  confirm-type="search" bindconfirm="startSearch"/>
      <view catchtap="catchSearchInputClear" class="clear {{hideSearchClear?'':'show'}}"><icon type="clear" size="12"  /></view>
 
