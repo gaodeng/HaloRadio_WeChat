@@ -9,13 +9,13 @@
   box-shadow: 1px 5px 33px rgba(0,0,0,.2);
 }
 .title{
-  margin:20px;
+  margin:10px;
   
 }
 .timeline{
   width:100%;
   
-  padding:20px;
+  padding:20px 40px;
   box-sizing: border-box;
 }
 
@@ -58,7 +58,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin:10px 20px 40px 20px;
+  margin:20px 20px 40px 20px;
   
   
 }
