@@ -81,8 +81,9 @@ Page({
   startSearch: function (e) {
     var value = e.detail.value
     var thisCtx = this;
+    wx.showNavigationBarLoading() 
     wx.request({
-      url: "https://www.moon.fm/api/oneradio/v4/search/podcast?page=1&pagesize=10&search_k=" + value,
+      url: "https://www.moon.fm/api/oneradio/v5/search/podcast?page=1&pagesize=10&search_k=" + value,
       data: {},
       header: {
         // "Content-Type":"application/json"
@@ -90,9 +91,11 @@ Page({
       success: function (res) {
         console.log(res.data)
         thisCtx.setData({ podcastList: res.data.data });
+        wx.hideNavigationBarLoading() 
       },
       fail: function (err) {
         console.log(err)
+        wx.hideNavigationBarLoading() 
       }
 
     })
@@ -129,7 +132,7 @@ Page({
     queryRequest({});
     function queryRequest(data) {
       wx.request({
-        url: "https://www.moon.fm/api/oneradio/v4/hot",
+        url: "https://www.moon.fm/api/oneradio/v5/hot",
         data: data,
         header: {
           // "Content-Type":"application/json"

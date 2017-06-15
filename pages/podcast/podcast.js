@@ -1,5 +1,6 @@
 // podcast.js
 var app = getApp();
+var titleLoadingId
 Page({
 
   /**
@@ -25,6 +26,23 @@ Page({
     backgroundAudioManager.src = data.streamUrl;
     backgroundAudioManager.duration=120;
     app.globalData.currentTrack={author:data.author,title:data.title,cover:data.cover,streamURL:data.streamUrl}
+
+
+    wx.showToast({
+      title: '开始播放',
+     
+      duration: 2000
+    })
+  },
+
+  showNavBarLoading:function(){
+    clearTimeout(titleLoadingId)
+    titleLoadingId = setTimeout(() => wx.showNavigationBarLoading(), 100);
+  },
+
+  hideNavBarLoading:function(){
+    clearTimeout(titleLoadingId);
+    wx.hideNavigationBarLoading();
   },
 
   /**
@@ -35,14 +53,16 @@ Page({
 
     this.setData({author:options.title});
     this.setData({cover:options.cover});
-    wx.stopPullDownRefresh()
+    
     var thisCtx = this;
     var feedStr;
+    
     wx.setNavigationBarTitle({
-      title: options.title
+      title: decodeURI(options.title)
     })
-    //wx.showNavigationBarLoading() 
-
+    
+    thisCtx.showNavBarLoading();
+   
 
 
     wx.request({
@@ -62,12 +82,13 @@ Page({
         var items=res.data.items;
         
         thisCtx.setData({items});
-        
+        thisCtx.hideNavBarLoading();
 
 
       },
       fail: function (err) {
         console.log(err)
+        thisCtx.hideNavBarLoading();
       }
 
     })

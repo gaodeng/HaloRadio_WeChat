@@ -19,7 +19,7 @@
       <image src="{{playPauseImg}}" mode="aspectFit" />
     </view>
     <view  class="timePane">
-      <text class="timeLabel">{{currentPositionLabel}}</text>/
+      <text class="timeLabel">{{currentPositionLabel}}</text> / 
       <text class="timeLabel">{{durationLabel}}</text>
     </view>
   </view>
